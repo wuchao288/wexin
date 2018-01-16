@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BasePage.master.cs" 
+    Inherits="Hidistro.Web.Vshop.BasePage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title><%=HttpContext.Current.Items["Hishop.Title.Value"] %></title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+        name="viewport" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link href="/web/css/main.css" rel="stylesheet" />
+    <script src="/templates/vshop/default/script/jquery-1.11.0.min.js"></script>
+
+    <script src="/Utility/bootflat/js/bootstrap.min.js"></script>
+    <script src="/Utility/jquery.cookie.js"></script>
+    <script src="/templates/vshop/default/script/jquery.slides.min.js"></script>
+    <script src="/templates/vshop/default/script/icheck.min.js"></script>
+    <script src="/templates/vshop/default/script/main.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript"></script>
+    <script src="/Utility/weixin.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="body" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

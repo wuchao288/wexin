@@ -1,0 +1,9 @@
+using System;
+using System.Diagnostics;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Runtime.Versioning;
+[assembly: AssemblyVersion("2.1.5485.29474")]
+[assembly: AssemblyTitle("Tags")]
+[assembly: Guid("19265f14-d6cf-4666-aefc-f373722a6114")]

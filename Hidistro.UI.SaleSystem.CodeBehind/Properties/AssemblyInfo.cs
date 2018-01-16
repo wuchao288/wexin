@@ -1,0 +1,9 @@
+using System;
+using System.Diagnostics;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Runtime.Versioning;
+[assembly: System.Reflection.AssemblyVersion("1.0.0.0")]
+[assembly: System.Reflection.AssemblyTitle("CodeBehind")]
+[assembly: System.Runtime.InteropServices.Guid("caab2112-1580-44ec-9aab-2c9792b2c5f6")]

@@ -1,0 +1,71 @@
+﻿<hi:common_header runat="server" />
+
+<link href="/style/guajiang/css/big_wheel.css" rel="stylesheet" />
+<link href="/style/guajiang/css/vscratch.css" rel="stylesheet" />
+
+<section id="content3">
+    <form runat="server">
+        <div class="cover">
+            <div style="height: 133px;"></div>
+
+            <div class="s_img">
+                <div class="s_img2">
+                    <div class="textScratch"></div>
+                    <div id="canvasScratch"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="d_mt"></div>
+        <div class="boxcontent">
+            <div class="box">
+                <div class="title-brown">活动说明:</div>
+                <div class="Detail">
+                    <asp:literal runat="server" id="litActivityDesc" />
+                </div>
+            </div>
+        </div>
+
+        <div class="boxcontent">
+            <div class="w_exp box">
+                <div class="w_dashed">
+                    <div class="title-brown">活动时间:</div>
+
+                    <div class="Detail">
+                        <p>
+                            <asp:literal runat="server" id="litStartDate" />
+                        </p>
+
+                        <p>
+                            <asp:literal runat="server" id="litEndDate" />
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="boxcontent">
+            <div class="w_exp box">
+                <div class="title-brown">奖项设置:</div>
+                <div class="Detail">
+                    <hi:common_prizenames runat="server" id="litPrizeNames" />
+                </div>
+            </div>
+        </div>
+
+        <div class="boxcontent">
+            <div class="w_exp box">
+                <div class="title-brown">中奖用户:</div>
+                <div class="Detail">
+                    <hi:common_prizeusers runat="server" id="litPrizeUsers" />
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright2" style="height: 20px;">
+        </div>
+    </form>
+    <script type="text/javascript" src="/Utility/Scratch.js?t2"></script>
+</section>
+<hi:common_footer runat="server" />

@@ -1,0 +1,70 @@
+﻿<p style="display: none">
+    <hi:cnzzshow runat="server" />
+</p>
+<footer>
+        <%<asp:HyperLink ID="hyperindex" runat="server" NavigateUrl="Default.aspx" name="homestyle"> <div class="glyphicon glyphicon-home"></div>
+            <p>主页</p></asp:HyperLink> %>
+        <a href="ShoppingCart.aspx" id="anchors0">
+            <div class="glyphicon glyphicon-shopping-cart"></div>
+            <p>搜索</p>
+        </a>
+        <a href="MemberCenter.aspx" id="anchors1">
+            <div class="glyphicon glyphicon-user"></div>
+            <p>我是买家</p>
+        </a>
+
+          <asp:Panel ID="paneldistributor" runat="server" class="last-footer clearfix">
+            <a href="<% <asp:Literal runat="server" ID="litDistrbutorUrl" />%>" id="anchors2" style="color: #999;">
+                <div class="glyphicon glyphicon-cloud"></div>
+                <p><% <asp:Literal runat="server" ID="litDistrbutorTitle" Text="申请开店" />%></p>
+            </a>
+        </asp:Panel>
+
+     
+        <a>
+            <div class="glyphicon glyphicon-arrow-left"></div>
+            <p>返回</p>
+        </a>
+        <span style=" display:none" id="spanstyle"><asp:Literal runat="server" ID="lblStyle" /></span>
+        
+    </footer>
+<script type="text/javascript">
+    function showOrderState() {
+        var status;
+        if (navigator.appName.indexOf("Explorer") > -1) {
+
+            status = document.getElementById("spanstyle").innerText;
+
+        } else {
+
+            status = document.getElementById("spanstyle").textContent;
+
+        }
+        if (status != "") {
+            if ($.trim(status) == "3") {
+                if (document.getElementById("vDefault_ctl02_hyperindex") != null) {
+                    document.getElementById("vDefault_ctl02_hyperindex").className = 'active';
+                }
+            }
+            else {
+                if (document.getElementById("anchors" + status) != null)
+                {
+                    document.getElementById("anchors" + status).className = 'active';
+                }
+            }
+        }
+    }
+
+     $(document).ready(function () { showOrderState(); });
+
+    //隐藏底部菜单
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.call('hideToolbar');
+    });
+</script>
+<script type="text/javascript">
+        if ($('footer').children().length == 5) {
+            $('footer').children().css("width", "25%");
+        }
+</script>
+</body> </html> 

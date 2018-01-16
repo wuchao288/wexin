@@ -1,0 +1,59 @@
+﻿<hi:common_header runat="server" />
+<div class="pbox fill_info well">
+     <form id="form" role="form" class="clearfix apply">
+    <label for="txtUserName">
+        帐号名</label>
+    <input id="txtUserName" type="text" disabled="disabled" runat="server" clientidmode="Static"
+        class="form-control" placeholder="请填写您的昵称">
+    <label for="txtPhone">
+        手机</label>
+    <input id="txtPhone" type="text" runat="server" clientidmode="Static" class="form-control"
+        placeholder="请填写您的手机号">
+    <label for="txtRealName">
+        姓名</label>
+    <input id="txtRealName" type="text" runat="server" clientidmode="Static" class="form-control"
+        placeholder="请填写您的姓名">
+    <label for="txtEmail">
+        QQ</label>
+    <input id="txtEmail" type="text" runat="server" clientidmode="Static" class="form-control"
+        placeholder="请填写您的QQ号码">
+    </form>
+</div>
+<div class="pbox"><button id="btnSetUserName" type="button"  style="width:100%" class="btn btn-danger btn-block">保存用户信息</button></div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#btnSetUserName").bind("click", function () { SetUserName(); }); //设置新昵称
+         
+    });
+    function SetUserName() {
+        $.ajax({
+            url: "/API/VshopProcess.ashx",
+            type: 'post', dataType: 'json', timeout: 10000,
+            data: { action: "SetUserName", userName: $("#txtUserName").val(), RealName: $("#txtRealName").val(), CellPhone: $("#txtPhone").val(), QQ: $("#txtEmail").val() },
+            success: function (resultData) {
+                if (resultData.Status == "OK") {
+                    alert_h("修改用户信息成功", function () {
+                        var returnURL = window.location.search.substr(window.location.search.indexOf("returnUrl=") + 10);
+                        if (window.location.search.indexOf("returnUrl=") != -1) {
+                            location.href = decodeURIComponent(returnURL);
+                        } else {
+                            location.href = "/Vshop/MemberCenter.aspx";
+                        }
+
+                    });
+
+                }
+                else {
+                    alert_h("修改用户信息失败, 请重试");
+                }
+            }
+        });
+    }
+</script>
+<script>
+    //禁用右上角菜单
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.call('hideOptionMenu');
+    });
+</script>
+<hi:common_footer runat="server" />

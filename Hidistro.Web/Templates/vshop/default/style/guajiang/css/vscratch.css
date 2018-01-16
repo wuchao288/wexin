@@ -1,0 +1,32 @@
+﻿body {
+    background-image: url(../images/vscratch_bg.jpg);
+}
+
+.cover {
+    width: 320px;
+    max-width: 480px;
+    margin: 0 auto;
+    position: relative;
+    background-image: url(../images/activity-scratch-card-bannerbg.png);
+    height: 200px;
+    background-size: contain;
+}
+
+.s_img {
+    width: 140px;
+    height: 40px;
+    padding-left:100px;
+}
+
+.textScratch {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display:none;
+}
+
+#canvasScratch {
+
+    z-index: 10;
+}

@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{37D73C5B-9D71-49B0-AA0E-B91E288B7047}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hidistro.UI.ControlPanel.Utility</RootNamespace>
+    <AssemblyName>Hidistro.UI.ControlPanel.Utility</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Hishop.Components.Validation">
+      <HintPath>..\dll\Hishop.Components.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="kindeditor.Net">
+      <HintPath>..\dll\kindeditor.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllowLoginRadioButtonList.cs" />
+    <Compile Include="AttributeUseageModeRadioButtonList.cs" />
+    <Compile Include="BrandCategoriesCheckBoxList.cs" />
+    <Compile Include="ExpressCheckBoxList.cs" />
+    <Compile Include="ExpressPrintButton.cs" />
+    <Compile Include="GiftStatusRadioButtonList.cs" />
+    <Compile Include="GridSkuMemberPriceTable.cs" />
+    <Compile Include="HiControls.cs" />
+    <Compile Include="ImageDataGradeDropDownList.cs" />
+    <Compile Include="ImageTypeLabel.cs" />
+    <Compile Include="LogsUserNameDropDownList.cs" />
+    <Compile Include="MemberGradeCheckBoxList.cs" />
+    <Compile Include="MemberGradeDropDownList.cs" />
+    <Compile Include="MemberHasVipCardDropDownList.cs" />
+    <Compile Include="MemberPriceDropDownList.cs" />
+    <Compile Include="MemberSearch.cs" />
+    <Compile Include="PaymentDropDownList.cs" />
+    <Compile Include="ProductCategoriesDropDownList.cs" />
+    <Compile Include="ProductCategoriesListBox.cs" />
+    <Compile Include="ProductEditColumn.cs" />
+    <Compile Include="ProductTypesCheckBoxList.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseOrderItemUpdateHyperLink.cs" />
+    <Compile Include="RegionArea.cs" />
+    <Compile Include="RoleDropDownList.cs" />
+    <Compile Include="ShippersDropDownList.cs" />
+    <Compile Include="ShippingTemplatesDropDownList.cs" />
+    <Compile Include="SiteNameLabel.cs" />
+    <Compile Include="SKUImage.cs" />
+    <Compile Include="UseAttributeImageRadioButtonList.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hidistro.ControlPanel.Commodities\Hidistro.ControlPanel.Commodities.csproj">
+      <Project>{898144E6-15C6-47D3-BF9A-19ED0D081785}</Project>
+      <Name>Hidistro.ControlPanel.Commodities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hidistro.ControlPanel.Members\Hidistro.ControlPanel.Members.csproj">
+      <Project>{87FAA7E3-8A65-49C3-85CF-3BD9C7A11F76}</Project>
+      <Name>Hidistro.ControlPanel.Members</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hidistro.ControlPanel.Sales\Hidistro.ControlPanel.Sales.csproj">
+      <Project>{7063C430-345E-4926-8AC1-DF1BA85ABC80}</Project>
+      <Name>Hidistro.ControlPanel.Sales</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hidistro.ControlPanel.Store\Hidistro.ControlPanel.Store.csproj">
+      <Project>{5E7C3714-6BD0-42AE-AD30-866F97E8A565}</Project>
+      <Name>Hidistro.ControlPanel.Store</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hidistro.Core\Hidistro.Core.csproj">
+      <Project>{F32AD09E-CDA9-4AE8-A2E1-64D17AF304DD}</Project>
+      <Name>Hidistro.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hidistro.Entities\Hidistro.Entities.csproj">
+      <Project>{53792DC2-CAA0-48AC-8869-30C5E13CD109}</Project>
+      <Name>Hidistro.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hidistro.UI.Common.Controls\Hidistro.UI.Common.Controls.csproj">
+      <Project>{68E713AD-91E0-4809-9EAE-245D853F9A97}</Project>
+      <Name>Hidistro.UI.Common.Controls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

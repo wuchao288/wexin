@@ -1,0 +1,78 @@
+﻿<hi:common_header runat="server"/>
+<div class="home-head distributor-head">
+    <img id="imglogo" class="img-circle" src="/Utility/pics/headLogo.jpg" style="border-width:0px;">
+	<div class="info">
+       <div class="title"style="width: 215px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; margin-bottom: 2px;">
+           <asp:Literal ID="litStroeName" runat="server"></asp:Literal></div>
+
+        <div class="title"style="width: 215px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; margin-bottom: 2px;">
+           <asp:Literal ID="litRefrralName" runat="server"></asp:Literal></div>
+    </div>
+    
+</div>
+<div class="row custom-row">
+        <div class="col-xs-4">
+            <Hi:FormatedMoneyLabel ID="saletotal" runat="server" NullToDisplay="0.00"></Hi:FormatedMoneyLabel>
+            <p class="font-xs text-muted">本店销售总额(元)</p>
+        </div>
+        <div class="col-xs-4">
+            <Hi:FormatedMoneyLabel ID="refrraltotal" runat="server"  NullToDisplay="0.00"></Hi:FormatedMoneyLabel>
+            <p class="font-xs text-muted">总资产(元)</p>
+        </div>
+        <div class="col-xs-4">
+            <span><asp:Literal ID="litStoreNum" runat="server" Text="0"></asp:Literal></span>
+            <p class="font-xs text-muted">下级分店数</p>
+        </div>
+    </div>
+<div class="pbox">
+    <div class="list-group">
+        <!--<a href="DistributorInfo.aspx" class="list-group-item">
+            店铺资料
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+        <a href="MyProducts.aspx" class="list-group-item">
+            店铺商品
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>-->
+        <asp:Literal ID="litdistirbutors" runat="server">
+       
+        </asp:Literal>
+        <a href="DistributorCommission.aspx" class="list-group-item">
+            店铺佣金
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+        <a href="NameCard.aspx" class="list-group-item">
+            店主资料
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+
+    <div class="list-group">
+        <a href="DistributorOrders.aspx" class="list-group-item">
+            店铺订单
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+
+    <div class="list-group">
+        <a href="/Vshop/SaleService.aspx" class="list-group-item">
+            卖家服务中心
+        </a>
+        <a href="FriendsCircle.aspx" class="list-group-item">
+            转发朋友圈
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+
+         <asp:Literal ID="litQRcode" runat="server">
+       
+        </asp:Literal>
+        
+    </div>
+</div>
+<script>
+    //禁用右上角菜单
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.call('hideOptionMenu');
+    });
+</script>
+<Hi:Common_Footer runat="server" />

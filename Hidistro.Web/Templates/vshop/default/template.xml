@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Name>默认</Name>
+  <TopicProductMaxNum>100</TopicProductMaxNum>
+  <CategoryProductMaxNum>6</CategoryProductMaxNum>
+  <MarketPrice>10000</MarketPrice>
+  <SalePrice>10000</SalePrice>
+  <DefaultBg>/templates/vshop/default/images/ad/imgDefaultBg.jpg</DefaultBg>
+  <ImageUrl>default.jpg</ImageUrl>
+  <Phone>0595-22979903</Phone>
+  <Navigate>http://j.map.baidu.com/pGluq</Navigate>
+</root>

@@ -1,0 +1,29 @@
+﻿body {
+    background:url(/templates/vshop/default/images/process/m_b.jpg) repeat; 
+}
+
+.title {
+    font-size:20px;
+    font-weight:bold;
+}
+
+#content {
+    margin:10px;
+}
+
+#ulVoteItem li p{
+    margin:0;
+    padding:0;
+    height:20px;
+    line-height:20px;
+    display:block;
+}
+
+#ulVoteItem li.hover p{
+    background-color:#5FC923;
+    color:white;
+}
+
+#ulVoteItem li em {
+    background-color:#5FC923;
+}

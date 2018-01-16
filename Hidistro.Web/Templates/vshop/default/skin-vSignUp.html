@@ -1,0 +1,105 @@
+﻿<hi:common_header runat="server" />
+
+<link href="/style/guajiang/css/big_wheel.css" rel="stylesheet" />
+<link href="/style/guajiang/css/signup.css" rel="stylesheet" />
+
+<style>
+    body {
+        background: #eb3817;
+    }
+</style>
+<script type="text/javascript">
+    function GetId() {
+        var id = window.location.search.substr(window.location.search.indexOf("=") + 1);
+        if (id.indexOf("&") > 0)
+            id = id.substr(0, id.indexOf("&"));
+        return id;
+    }
+    function SubmitSignUp() {
+        var id = GetId();
+        var data = {};
+        data.id = id;
+        data.code = $("#code").val();
+        $.post("/api/VshopProcess.ashx?action=AddSignUp", data, function (json) {
+            if (json.success === true) {
+                alert_h(json.msg, function () {
+                    location.href = "/Vshop/ticket.aspx?id=" + GetId();
+                });
+
+            }
+            else {
+                alert_h(json.msg);
+            }
+        });
+    }
+    function hideSignUpBtn() {
+
+        $('.w_btn').hide();
+    }
+</script>
+<form runat="server">
+    <section>
+        <div class="signup">
+            <img src="/images/process/sign.jpg">
+        </div>
+
+        <div id="content">
+            <div class="d_mt"></div>
+            <div class="boxcontent">
+                <div class="box">
+                    <div class="title-green">活动说明:</div>
+                    <div class="Detail">
+                        <asp:literal runat="server" id="litActivityDesc" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="boxcontent">
+                <div class="w_exp box">
+                    <div class="w_dashed">
+                        <div class="title-green">活动时间:</div>
+
+                        <div class="Detail">
+                            <p>
+                                <asp:literal runat="server" id="litStartDate" />
+                            </p>
+
+                            <p>
+                                <asp:literal runat="server" id="litEndDate" />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="boxcontent">
+                <div class="w_exp box">
+                    <div class="title-green">奖项设置:</div>
+                    <div class="Detail">
+                        <hi:common_prizenames runat="server" id="litPrizeNames" />
+                    </div>
+                </div>
+            </div>
+
+
+            <asp:panel runat="server" visible="true" id="pnlInfo">
+            <div class="boxcontent">
+                <div class="w_exp box">
+                    <div class="title-green">报名邀请码:</div>
+                    <div class="Detail">
+                          <input type="text" id="code" class="mod_input flex_box" style="height:35px;" placeholder="请输入您的邀请码">
+                      </div>  
+                   </div>
+            </div>
+            </asp:panel>
+
+            <div style="margin: 10px;">
+                <div id="divVoteOk" runat="server">
+                    <a href="javascript:void(0)" onclick="SubmitSignUp()" class="btn btn-danger">确认领奖人信息</a>
+                </div>
+            </div>
+            <div style="height: 10px;"></div>
+    </section>
+</form>
+<hi:common_footer runat="server" />
+

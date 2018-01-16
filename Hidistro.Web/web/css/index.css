@@ -1,0 +1,174 @@
+﻿#div1_left,#div1_right{
+    float: left;
+    width: 51.4%;
+    background-color: #de0017;
+    margin-bottom: 15px;
+    border-top: 20px solid #fff;
+    border-bottom: 10px solid #de0017;
+}
+#div1_right{
+    width: 48.6%;
+}
+#div1_left p{
+    margin: 5% 2% 0 4%;
+    padding: 3% 0;
+    background-color: #c40001;
+}
+#div1 a{
+    display: block;
+}
+#div1_left p a{
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+    margin: 0 3%;
+    padding: 2% 0;
+    width: 94%;
+    text-align: center;
+    border: 3px solid #fff;
+}
+#zuihong{
+    margin: 0 2% 0 4%;
+}
+#div1_left img{
+    width: 100%;
+}
+#div1_right .a1{
+    margin: 5% 4% 0 2%;
+    width: 94%;
+}
+#div1_right .a2{
+    float: left;
+    margin: 1% 2.3% 0 2.2%;
+    width: 44%;
+}
+#div1 img{
+    width: 100%;
+}
+#hyzx,#dapainhj{
+    width: 100%;
+    margin-bottom: 15px;
+}
+#bjyg{
+    background: url(/Templates/vshop/default/images/index/bjyg.gif) no-repeat;
+    height: 84px;
+    text-indent: -10000px;
+}
+#ykjb{
+    background: url(/Templates/vshop/default/images/index/ykjb.gif) no-repeat;
+    height: 68px;
+    text-indent: -10000px;
+}
+#div2 a{
+    display: block;
+}
+#div2 p,#div3 p{
+    float: left;
+    text-indent: -10000px;
+}
+#hsnn{
+    width: 50%;
+    background: url(/Templates/vshop/default/images/index/huasnn.gif) no-repeat;
+    background-size: contain;
+    height: 430px;
+}
+#hyg{
+    background: url(/Templates/vshop/default/images/index/haiwg.gif) no-repeat;
+    background-size: contain;
+    width: 50%;
+    height: 148px;
+}
+#nkzc{
+    background: url(/Templates/vshop/default/images/index/shoub.gif) no-repeat;
+    background-size: contain;
+    width: 25%;
+    height: 274px;
+}
+#yhq{
+    background: url(/Templates/vshop/default/images/index/shouj.gif) no-repeat;
+    background-size: 100%;
+    width: 25%;
+    height: 274px;
+}
+#pph{
+    width: 50%;
+    background: url(/Templates/vshop/default/images/index/youkjb.gif) no-repeat;
+    background-size: contain;
+    height: 430px;
+    margin-bottom: 62px;
+}
+
+#ppj{
+    background: url(/Templates/vshop/default/images/index/pinpaij.gif) no-repeat;
+    background-size: contain;
+    width: 50%;
+    height: 160px;
+}
+#mptm{
+    background: url(/Templates/vshop/default/images/index/yif.gif) no-repeat;
+    background-size: contain;
+    width: 25%;
+    height: 274px;
+}
+#jrsx{
+    background: url(/Templates/vshop/default/images/index/xiez.gif) no-repeat;
+    background-size: 100%;
+    width: 25%;
+    height: 274px;
+}
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    height: 62px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+}
+footer ul{
+    height: 62px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+footer ul li{
+    float: left;
+    width: 20%;
+    height: 60px;
+    margin-top: 3px;
+}
+footer ul li a{
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding-top: 35px;
+    color: #949494;
+    text-decoration: none;
+    font-family: helvetica,arial,simsun,sans-serif;
+}
+footer ul li#sy a{
+    color: #dd4f5d;
+}
+#sy{
+    background: url(/Templates/vshop/default/images/index/shouye.gif) no-repeat center 0;
+}
+#ss{
+    background: url(/Templates/vshop/default/images/index/soushuo.gif) no-repeat center 0;
+}
+#mai3{
+    background: url(/Templates/vshop/default/images/index/mai3.gif) no-repeat center 0;
+}
+#mai4{
+    background: url(/Templates/vshop/default/images/index/mai4.gif) no-repeat center 0;
+}
+#fh{
+    background: url(/Templates/vshop/default/images/index/fanhui.gif) no-repeat center 0;
+}

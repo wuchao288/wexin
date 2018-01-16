@@ -1,0 +1,67 @@
+﻿<hi:common_header runat="server" />
+
+<link href="/style/guajiang/css/big_wheel.css" rel="stylesheet" />
+<link href="/style/guajiang/css/wheel.css" rel="stylesheet" />
+
+<section id="content2">
+    <script src="/utility/bigwheel.js" type="application/javascript"> </script>
+    <form runat="server">
+        <div class="wheel">
+            <img runat="server" src="/images/process/panpic.png" id="bgimg" style="visibility: hidden; position: absolute;" />
+            <img src="/images/process/flag.png" id="flagimg" style="visibility: hidden; position: absolute;" />
+            <div class="panzi">
+                <canvas id="wheelcanvas" width="260" height="260"></canvas>
+            </div>
+        </div>
+
+        <div class="boxcontent">
+            <div class="w_exp box">
+                <div class="w_dashed">
+                    <div class="title-green">活动说明:</div>
+                    <div class="Detail">
+                        <asp:literal runat="server" id="litActivityDesc" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="boxcontent">
+            <div class="w_exp box">
+                <div class="w_dashed">
+                    <div class="title-green">活动时间:</div>
+
+                    <div class="Detail">
+                        <p><asp:literal runat="server" id="litStartDate" /></p>
+                        
+                        <p><asp:literal runat="server" id="litEndDate" /></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="boxcontent">
+            <div class="w_exp box">
+                <div class="title-green">奖项设置:</div>
+                <div class="Detail">
+                    <hi:common_prizenames runat="server" id="litPrizeNames" />
+                </div>
+            </div>
+        </div>
+
+        <div class="boxcontent">
+            <div class="w_exp box">
+                    <div class="title-green">中奖用户:</div>
+                <div class="Detail">
+                    <hi:common_prizeusers runat="server" id="litPrizeUsers" />
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright2" style="height:20px;">
+            
+        </div>
+    </form>
+</section>
+
+<hi:common_footer runat="server" />
+

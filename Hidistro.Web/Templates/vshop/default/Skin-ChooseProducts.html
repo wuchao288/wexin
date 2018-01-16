@@ -1,0 +1,49 @@
+﻿<hi:common_header runat="server" />
+<div class="pbox clearfix choose-goods">
+    <div class="shoppingStepBar clearfix">
+        <div class="step">
+            <div class="glyphicon glyphicon-pencil">
+            </div>
+        </div>
+        <div class="step active">
+            <div class="glyphicon glyphicon-gift">
+            </div>
+        </div>
+        <div class="step">
+            <div class="glyphicon glyphicon-eye-open">
+            </div>
+        </div>
+    </div>
+    <hr />
+<div class="clearfix class_goods">
+    <div class="dropdown">
+        <div class="dropdown-toggle search_img" id="dropdownMenu1" data-toggle="dropdown"><span class="glyphicon glyphicon-th"></span>
+        </div>
+        <div class="search_input">
+            <input type="text" class="text" runat="server" id="keywords" placeholder="">
+            <span class="glyphicon glyphicon-search" onclick="Searchkeys()">
+            </span>
+        </div>
+        <label>
+            全选<input type="checkbox" name="CheckAll" /></label>
+        <ul class="dropdown-menu submenu" role="menu" aria-labelledby="dropdownMenu1">
+            <hi:vshoptemplatedrepeater id="rpCategorys" templatefile="/Tags/skin-Common_SubCategory.ascx"
+                runat="server" />
+        </ul>
+    </div>
+</div>
+<div id="shops" class="clearfix myproduct">
+    <hi:vshoptemplatedrepeater id="rpChooseProducts" templatefile="/Tags/skin-Common_ChooseProducts.ascx"
+        runat="server" />
+</div>
+<div class="nextstep pbox">
+    <a type="button" class="btn btn-danger btn-block" href="RequestDistributorFinish.aspx">
+        下一步</a>
+</div>
+<script>
+    function Searchkeys() {
+        var serachkey = $("#vChooseProducts_keywords").val().replace(/\s/g, "");
+        location.href = "?keyWord=" + escape(serachkey);
+    }
+</script>
+<hi:common_footer runat="server" />

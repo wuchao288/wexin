@@ -1,0 +1,213 @@
+﻿body {
+    color: #222;
+    font-family: Microsoft YaHei,Helvitica,Verdana,Tohoma,Arial,san-serif;
+    background-color: #f0f0f0;
+    text-decoration: none;
+}
+
+table {
+    border-spacing:0;
+    border-collapse:collapse;
+}
+
+
+body, div, p, ul, ol, li, textarea, form, input, h1, h2, h3, h4, h5, dl, dt, dd, img, section, article, aside, header, footer, nav, figure, hgroup {
+    margin:0;
+    padding:0;
+}
+
+a:link, a:visited {
+    color: #5b5b5b;
+    text-decoration: none;
+}
+
+#ui-header {
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+    #ui-header .fixed {
+        display: block;
+        margin: 0 auto;
+        min-width: 320px;
+        height: 45px;
+        top: 0;
+        border-bottom: 1px solid #D1D1D1;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+        -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f9f9f9));
+        background-image: -webkit-linear-gradient(#ffffff, #f9f9f9);
+        background-image: -moz-linear-gradient(#ffffff, #f9f9f9);
+        background-image: -ms-linear-gradient(#ffffff, #f9f9f9);
+        background-image: -o-linear-gradient(#ffffff, #f9f9f9);
+        background-image: linear-gradient(#ffffff, #f9f9f9);
+        /*opacity: 0.95;*/
+    }
+
+.ui-title {
+    min-height: 46px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    display: block;
+    margin: 10px 70px 0;
+    padding: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    outline: 0 !important;
+    display: none;
+    text-indent: -10px;
+}
+
+.ui-btn-left {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: url(menu.png) no-repeat center center;
+    display: block;
+    width: 50px;
+    height: 45px;
+    text-indent: -9999px;
+    margin: 0;
+    padding: 0;
+    background-size: 24px auto;
+}
+
+.ui-btn-left_pre {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: url(/web/images/pre.png) no-repeat center center;
+    display: block;
+    width: 50px;
+    height: 45px;
+    text-indent: -9999px;
+    margin: 0;
+    padding: 0;
+    background-size: 24px auto;
+}
+
+.ui-btn-right {
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    /*background: url(img/Refresh.png) no-repeat center center;*/
+    display: block;
+    width: 50px;
+    height: 45px;
+    text-indent: -9999px;
+    margin: 0;
+    padding: 0;
+    background-size: 28px auto;
+}
+
+.ui-btn-right_menu {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    /*background: url(img/menu.png) no-repeat center center;*/
+    display: block;
+    width: 50px;
+    height: 45px;
+    text-indent: -9999px;
+    margin: 0;
+    padding: 0;
+    background-size: 24px auto;
+}
+
+.ui-btn-right_home {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    /*background: url(home.png) no-repeat center center;*/
+    display: block;
+    width: 50px;
+    height: 45px;
+    text-indent: -9999px;
+    margin: 0;
+    padding: 0;
+    background-size: 24px auto;
+}
+
+.popmenu {
+    display: block;
+    position: relative;
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    font-size: 16px !important;
+}
+
+
+
+.panel_container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.piclist_container {
+    padding: 0 10px;
+}
+
+.piclist {
+    margin: 10px auto;
+    box-shadow: 1px 2px 1px 0px #AAA;
+    -moz-box-shadow: 1px 2px 1px 0px #aaa;
+    -webkit-box-shadow: 1px 2px 1px 0px #AAA;
+}
+
+    .piclist .list_bd {
+        font-size: 14px;
+        color: #666;
+        line-height: 25px;
+        position: relative;
+        min-height: 140px;
+    }
+
+        .piclist .list_bd .cover {
+            line-height: 0px;
+            font-size: 0px;
+            height: 140px;
+            width: 100%;
+            background-size: cover;
+            -webkit-background-size: cover;
+        }
+
+        .piclist .list_bd .discribe {
+            color: #fff;
+            line-height: 16px;
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            width: 100%;
+            background: rgba(0,0,0,0.3);
+        }
+
+            .piclist .list_bd .discribe p {
+                padding: 3px;
+                text-shadow: 1px 1px 1px #999;
+                -moz-text-shadow: 1px 1px 1px #999;
+                -webkit-text-shadow: 1px 1px 1px #999;
+            }
+
+
+#copyright {
+    margin: 15px auto 0;
+    width: 95%;
+    border-top: 1px #ccc solid;
+    text-align: center;
+}
+
+#copyright a{
+    font-size: 12px;
+
+}

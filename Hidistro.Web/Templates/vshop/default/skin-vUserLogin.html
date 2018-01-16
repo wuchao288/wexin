@@ -1,0 +1,74 @@
+﻿<hi:common_header runat="server" />
+    <div class="pbox well" style="padding:20px 15px 0;">
+        <form id="form" role="form" class="clearfix apply">    
+            <div class="form-group">    
+                <input type="text" class="form-control" id="txtUserName" placeholder="请输入您的用户名"/>  
+            </div>
+            <div class="form-group">     
+                <input type="password" class="form-control" id="txtPassword"   placeholder="请输入您的密码"/>  
+            </div>
+            <div class="form-group">
+               <button type="button" class="btn btn-danger btn-block" style="width:100%" id="btnUserLogin"  onclick="UserLogin();" >立即登录</button>
+               <p class="text-right" style="margin-top:5px;"><a onclick="Register();" class="text-muted">免费注册</a></p>
+            </div> 
+        </form>
+    </div>
+<script>
+    //禁用右上角菜单
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.call('hideOptionMenu');
+    });
+</script>
+<script type="text/javascript">
+   
+    $(document).ready(function () {
+
+    });
+    function Register() {
+        location.href = "/Vshop/Register.aspx";
+    }
+    function UserLogin() {
+        var username = $.trim($("#txtUserName").val())
+        var password = $.trim($("#txtPassword").val());
+        if (username == "") {
+            alert_h("用户名不能为空！");
+            return;
+        }
+        if (password == "") {
+            alert_h("密码不能为空！");
+            return;
+        }
+        if (username.length < 2) {
+            alert_h('用户名至少要2个字符');
+            return;
+        }
+        if (password.length < 6) {
+            alert_h('密码至少要6个字符');
+            return;
+        }
+        $.ajax({
+            url: "/API/VshopProcess.ashx",
+            type: 'post', dataType: 'json', timeout: 10000,
+            data: { action: "UserLogin", userName: $("#txtUserName").val(), password: $("#txtPassword").val() },
+            success: function (resultData) {
+
+                if (resultData.Status == "OK") {
+                    alert_h("登录成功", function () {
+                        location.href = "/Vshop/MemberCenter.aspx";
+                    });
+                }
+                else {
+                    if (resultData.Status == "-1") {
+                        
+                        alert_h("用户名不存在！");
+                    }
+                    else {
+                        alert_h("密码错误！");
+                    }
+                }
+            }
+        });
+    }
+</script>
+<Hi:Common_Footer runat="server" />
+

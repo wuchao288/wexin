@@ -1,0 +1,83 @@
+﻿<hi:common_header runat="server" />
+
+<style>
+    body {
+        background-color:white;
+    }
+
+    .logo_img {
+        height:80px;
+    }
+
+    .logo_right {
+        /*background-image:url(/images/qrcode/qrcode_top_01.png);
+        background-repeat:no-repeat;*/
+        background-size:contain;
+        height:80px;
+        border:solid 1px #ECECEC;
+        border-radius:5px;
+        padding:10px;
+        margin-right:20px;
+        padding-top:15px;
+    }
+
+    .f_c {
+        color:#DA2D26;
+    }
+</style>
+
+<asp:literal runat="server" id="liturl" visible="false"/>
+
+<div style="height: 120px;display:-webkit-box;padding-top:20px;">
+    <div style="width:120px;text-align:center;height:80px;">
+        <hi:hiimage runat="server" id="imglogo" cssclass="logo_img" imageurl="/Utility/pics/headLogo.jpg" />
+    </div>
+    <div style="-webkit-box-flex:1;" class="logo_right">
+        <p>我是 <span class="f_c"><asp:literal id="litName" runat="server"></asp:literal></span></p>
+        <p>我为 <span class="f_c"><asp:literal id="litstorename" runat="server"></asp:literal> 代言</span></p>
+    </div>
+</div>
+
+<img src="/images/qrcode/qrcode_01.png" style="width: 100%;" />
+
+
+<div class="qrcode">
+    <div style="-webkit-box-flex: 1;" class="qr_box">
+        <asp:image id="litimgorcode" runat="server" class="imgorcode" />
+    </div>
+    <div class="zhiwen qr_box" style="-webkit-box-flex: 1;">
+        <img src="/images/qrcode/qrcode_zhiwen.png" />
+    </div>
+</div>
+<img src="/images/qrcode/qrcode_02.png" style="width: 100%;" />
+
+<div style="text-align:center;height:100px;margin-top:20px;display:-webkit-box;padding:10px;">
+    <a class="btn btn-danger" id="fenxiao" style="width:100%;display: block;height: 50px;line-height:50px;padding:0;">我要分销</a>
+</div>
+
+<div class="mask" id="mask"></div>
+<div class="pop_box fenxiang" id="shoucang"></div>
+<hi:common_footer runat="server" />
+
+<!--<script>
+    $(".link_zhiwen").bind("touchstart", function (event) {
+        location.href = $(this).attr("href");
+        event.preventDefault();
+    });
+</script>-->
+<script>
+    $("#fenxiao").click(function () {
+        $("#mask").show();
+        $("#shoucang").show();
+    });
+
+    $("#mask").click(function () {
+        $(this).hide();
+        $("#shoucang").hide();
+    });
+
+    $("#shoucang").click(function () {
+        $("#mask").hide();
+        $("#shoucang").hide();
+    });
+</script>

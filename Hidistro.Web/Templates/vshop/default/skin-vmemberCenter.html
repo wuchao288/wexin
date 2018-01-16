@@ -1,0 +1,54 @@
+﻿<hi:common_header runat="server" />
+<div class="home-head memberCenter">
+    <img src="/Utility/pics/headLogo.jpg" class="img-circle" />
+    <div class="info">
+         <div class="title"style="width: 220px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; margin-bottom:2px;">您好，<asp:literal runat="server" id="litUserName" />【<asp:literal runat="server" id="litMemberGrade" />】</div>
+        <div class="presentExp font-m">
+            <span class="badge badge-danger">消费：¥<asp:literal runat="server" id="litExpenditure" /></span>            
+            </div>
+    </div>
+</div>
+<div class="pbox">
+    <div class="list-group">
+        <a href="/Vshop/MemberOrders.aspx?status=1" class="list-group-item">
+            待付款
+            <span class="badge-h"><asp:literal runat="server" id="litWaitForPayCount" /></span>
+        </a>
+        <a href="/Vshop/MemberOrders.aspx?status=3" class="list-group-item">
+            待收货
+            <span class="badge-h"><asp:literal runat="server" id="litWaitForRecieveCount" /></span>
+        </a>
+        <a href="/Vshop/MemberOrders.aspx" class="list-group-item">
+            全部订单
+        </a>
+    </div>
+
+    <div class="list-group">
+        <a href="/Vshop/MyFavorites.aspx" class="list-group-item">
+            我的收藏
+        </a>
+          <a href="/Vshop/MyConsultations.aspx" class="list-group-item">
+            我的咨询
+        </a>
+    </div>
+
+    <div class="list-group">
+        <a href="/Vshop/EditShippingAddress.aspx" class="list-group-item">
+            我的收货地址
+        </a>
+        <a href="/Vshop/UserInfo.aspx?edit=true" class="list-group-item">
+            个人资料
+        </a>
+         <a href="/Vshop/SaleService.aspx" class="list-group-item">
+            买家服务中心
+        </a>
+		<a href="logout.aspx"class="list-group-item">退出登录</a>
+    </div>
+</div>
+<script>
+    //禁用右上角菜单
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.call('hideOptionMenu');
+    });
+</script>
+<Hi:Common_Footer runat="server" />

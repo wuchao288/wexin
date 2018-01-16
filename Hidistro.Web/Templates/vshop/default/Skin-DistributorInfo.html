@@ -1,0 +1,72 @@
+﻿   <hi:common_header runat="server" />
+    <div class="pbox distributor well">
+        <form method="post" action="/API/VshopProcess.ashx" target='fileframe' enctype="multipart/form-data">
+            <div class="form-group">  
+                <label for="phone">店铺名称</label>      
+                <input type="text" class="form-control" runat="server" name="stroename" id="txtstorename" placeholder="店铺名称限制在20字以内"/>  
+            </div>
+            <div class="form-group">  
+                <label for="phone">店铺简介</label>      
+                <textarea class="form-control" rows="3"  runat="server" name="descriptions" id="txtdescription" placeholder="填写数字限制在30字以内"></textarea>
+            </div> 
+        <div class="bgstore clearfix">
+        <p>选择店铺背景</p>      
+        <div class="content clearfix">
+        <asp:Literal ID="litBackImg" runat="server"></asp:Literal>
+        </div>
+        </div>
+        <div class="storeLogo">
+            <p>店铺Logo</p>
+            <div class="upFile clearfix">
+            <div class="bgImg"><img id="imglogo" runat="server" src="\Admin\images\headLogo.jpg" /></div>  <div class="adds"><input type="file" id="exampleInputFile" name="logo"></div>
+              <p class="font-s text-muted">此处不允许更换商城Logo</p>
+            </div>
+       </div>
+       <input type="hidden" name="backimg" id="hdbackimg" runat="server"/>
+       <input type="hidden" name="hdlogo" id="hdlogo" runat="server" />
+       <input name="action" type="hidden" value="UpdateDistributor" />
+       </form>
+    </div>
+    <div class="nextstep pbox">
+	   <a type="button" class="btn btn-danger btn-block" onclick="javascript:return ValidRequestDistributor()">保存店铺</a>
+	</div>
+    <iframe id="fileframe" style="display:none"></iframe>
+    <script>
+        var str;
+        $(function () {
+            $('#exampleInputFile').change(function () {
+                str = $(this).val();
+                var arr = str.split('\\'); //注split可以用字符或字符串分割 
+                var my = arr[arr.length - 1]; //这就是要取得的图片名称 
+                $("#upimg").text('已选：' + my + " ");
+            })
+        });
+        function ValidRequestDistributor() {
+            if ($("#VDistributorInfo_txtstorename").val().replace(/\s/g, "").length <= 0) {
+                alert_h("请输入店铺名称");
+                return false;
+            }
+            if ($("#VDistributorInfo_txtstorename").val().replace(/\s/g, "").length > 20) {
+                alert_h("店铺名称限制在20字以内");
+                return false;
+            }
+            if ($("#VDistributorInfo_txtdescription").val().replace(/\s/g, "").length > 30) {
+                alert_h("店铺描述在30字以内");
+                return false;
+            }
+            var imgurl = $(".pbox .content div[class='disactive']").find("img").attr("src");
+            $("#VDistributorInfo_hdbackimg").val(imgurl);
+            $("form").submit();
+            setTimeout(UploadMsg, 2000);
+        }
+
+        function UploadMsg() {
+            var msg = $("#fileframe").contents().find("pre").text();
+            if (msg == "OK") {
+                alert_h('店铺更新成功！', function () { location.href = 'DistributorCenter.aspx' });
+            } else {
+                alert_h(msg);
+            }
+        }
+    </script>
+    <hi:common_footer runat="server" />   

@@ -1,0 +1,9 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <wxlogin>
+    <OperTime>2015/7/11 1:16:50</OperTime>
+    <ErrorMsg>https://open.weixin.qq.com/connect/oauth2/authorize?appid=&amp;redirect_uri=http%3a%2f%2flocalhost%3a5622%2fVshop%2fDistributorError.aspx&amp;response_type=code&amp;scope=snsapi_userinfo&amp;state=STATE#wechat_redirect</ErrorMsg>
+    <OpenId>用户授权的路径</OpenId>
+    <PageUrl>http://localhost:5622/Vshop/DistributorError.aspx</PageUrl>
+  </wxlogin>
+</DocumentElement>

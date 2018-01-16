@@ -1,0 +1,168 @@
+﻿<hi:common_header runat="server" />
+
+<link href="/style/slider.css" rel="stylesheet" />
+<link href="/web/css/index.css" rel="stylesheet" />
+
+<script type='text/javascript'>
+    (function (m, ei, q, i, a, j, s) {
+        m[a] = m[a] || function () {
+            (m[a].a = m[a].a || []).push(arguments)
+        };
+        j = ei.createElement(q),
+            s = ei.getElementsByTagName(q)[0];
+        j.async = true;
+        j.charset = 'UTF-8';
+        j.src = i + '?v=' + new Date().getUTCDate();
+        s.parentNode.insertBefore(j, s);
+    })(window, document, 'script', '//eco-api.meiqia.com/dist/meiqia.js', '_MEIQIA');
+    _MEIQIA('entId', 6136);
+</script>
+<script src="/script/other/vdefault.js"></script>
+<style>
+    .kf {
+        width: 60px;
+        height: 60px;
+        position: fixed;
+        top: 50%;
+        right: 0;
+        z-index: 1000;
+    }
+
+        .kf a {
+            display: block;
+            background-image: url(/images/product/04.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 60px;
+        }
+
+    .ico_span div {
+        font-size: 3em;
+        height: 42px;
+        margin: auto;
+        width: 42px;
+        background-size: 100%;
+        font-size: 3em;
+    }
+
+    .slidesjs-navigation, slidesjs-container, slidesjs-pagination {
+        display: none !important;
+    }
+
+    img {
+        max-width: 100%;
+    }
+</style>
+
+<!--<div class="kf">
+    <a href="tel:<asp:literal id="litSaleService" runat="server"></asp:literal>"></a>
+</div>-->
+
+<div class="backtop" id="backtop">
+    <a href="javascript:void(0);"></a>
+</div>
+
+<!--轮播图-->
+<div class="container_box">
+    <div id="slides">
+        <hi:vshoptemplatedrepeater id="grdBanner" templatefile="/Tags/skin-Common_ManagerBanner.ascx"
+            runat="server" />
+    </div>
+</div>
+<img src="/images/index/fanzfl.gif" style="margin-top: -22px;"/>
+
+<div style="clear: both"></div>
+
+<!--图标导航-->
+<div class="icons" style="margin-top: 10px;">
+    <ul>
+        <hi:vshoptemplatedrepeater id="iconsRepeater" templatefile="/Tags/skin-Common_Icons.ascx"
+            runat="server" />
+    </ul>
+    <div class="clear"></div>
+</div>
+
+<div class="clear"></div>
+
+<div id="div1">
+    <div id="div1_left">
+        <p><a href="#" id="jrzdp">今日最大牌</a></p>
+        <a href="#" id="zuihong">
+            <img src="/images/index/zuihsy.gif"></a>
+    </div>
+    <div id="div1_right">
+        <a href="#" class="a1">
+            <img src="/images/index/nvzhc_big.gif"></a>
+        <a href="#" class="a2">
+            <img src="/images/index/nvzhc.gif"></a>
+        <a href="#" class="a2">
+            <img src="/images/index/nanzhc.gif"></a>
+        <a href="#" class="a2">
+            <img src="/images/index/neiyhc.gif"></a>
+        <a href="#" class="a2">
+            <img src="/images/index/xiangbhc.gif"></a>
+    </div>
+</div>
+<a href="#">
+    <img src="/images/index/huiyuanzx.gif" id="hyzx"></a>
+<p class="p1" id="bjyg">别具一格</p>
+<div id="div2">
+    <a href="#">
+        <p id="hsnn">达利园花生牛奶24盒</p>
+    </a>
+    <a href="#">
+        <p id="hyg">海外购</p>
+    </a>
+    <a href="#">
+        <p id="nkzc">南客众筹</p>
+    </a>
+    <a href="#">
+        <p id="yhq">优惠券</p>
+    </a>
+</div>
+<a href="#">
+    <img src="/images/index/dapainhj.gif" id="dapainhj"></a>
+
+<p class="p1" id="ykjb">有口皆碑</p>
+<div id="div3">
+    <a href="#">
+        <p id="pph">品牌惠</p>
+    </a>
+    <a href="#">
+        <p id="mptm">名品特卖</p>
+    </a>
+    <a href="#">
+        <p id="jrsx">今日上新</p>
+    </a>
+    <a href="#">
+        <p id="ppj">品牌街</p>
+    </a>
+</div>
+
+<div class="mask" id="mask"></div>
+<div class="pop_box shoucang" id="shoucang"></div>
+
+<hi:common_footer runat="server" />
+<script type="text/javascript">
+
+
+    $(function () {
+        if (!$.trim($('#products').html())) {
+            $('#empty').css('display', '');
+        }
+        else {
+            $('#empty').css('display', 'none');
+        }
+
+        $('#slides').slidesjs({
+            play: {
+                active: true,
+                auto: true,
+                interval: 4000,
+                swap: true
+            }
+        });
+
+    });
+
+</script>

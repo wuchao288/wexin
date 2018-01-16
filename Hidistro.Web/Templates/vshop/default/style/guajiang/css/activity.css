@@ -1,0 +1,27 @@
+﻿#vActivity_img {
+    width: 100%;
+}
+
+.btn-danger {
+    width: 100%;
+}
+
+.w_img img {
+    width: 100%;
+}
+
+.w_info {
+    margin: 0 10px 10px 10px;
+}
+
+.act_info h2 {
+    font-size: 16px;
+}
+
+.qb_mb10 {
+    margin-bottom: 10px;
+}
+
+    .qb_mb10 input {
+        width: 100%;
+    }

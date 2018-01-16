@@ -1,0 +1,87 @@
+﻿.header {
+    height: 50px;
+    background-color: #DADADA;
+    display: -webkit-box;
+}
+
+li {
+    list-style:none;
+}
+
+#txtKeywords {
+    width: 100%;
+    padding: 0;
+    height: 38px;
+    line-height: 38px;
+    margin-top: 6px;
+    border: 0;
+    padding-left: 40px;
+    background-image: url(../../images/product/02.png);
+    background-repeat: no-repeat;
+    background-size: 28px;
+    background-position: 7px 5px;
+}
+
+.header .col1 {
+    background-image: url(../../images/product/01.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50%;
+}
+
+.header .col2 {
+}
+
+.header .col3 {
+    background-image: url(../../images/product/03.png);
+    background-repeat: no-repeat;
+    background-position: center 5px;
+    background-size: 35px;
+}
+
+
+
+.rank-list {
+    height: 40px;
+    border-radius: 5px;
+    border: solid 1px #D7D7D7;
+    display: -webkit-box;
+}
+
+    .rank-list .li-item {
+        border-right: solid 1px #D7D7D7;
+        height: 40px;
+    }
+
+        .rank-list .li-item a {
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+            display: block;
+            position: relative;
+        }
+
+            .rank-list .li-item a.red {
+                color: #FD6901;
+            }
+
+    .rank-list .li3 {
+        width: 50px;
+        background-image: url(../../images/product/06.png);
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position: center center;
+        border-right: 0;
+    }
+
+
+
+#productListContainer {
+    background-color: #F5F5F5;
+}
+
+.rank-list .glyphicon {
+    position: absolute;
+    top: 13px;
+    right: 10px;
+}

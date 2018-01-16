@@ -1,0 +1,31 @@
+﻿ <hi:common_header runat="server"/>
+  <ul class="clearfix orders-title title_bg">
+        <li class="activenum"><a href="DistributorOrders.aspx">全部订单(<asp:Literal ID="litallnum" runat="server"></asp:Literal>)</a></li>
+        <li><a href="?status=5">已成交(<asp:Literal ID="litfinishnum" runat="server"></asp:Literal>)</a></li>
+      </ul>
+    <div class="pbox clearfix">
+     <div id="empty" style=" text-align:center;">
+        <img src="/Utility/pics/nonestore.gif" />
+     </div>
+      <div class="all-orders" id="products">
+       <hi:vshoptemplatedrepeater id="vshoporders" templatefile="/Tags/Skin-Common_DistributorOrders.ascx"
+        runat="server" />
+    </div>
+    </div>
+    <script>
+        var strparam = getParam('status');
+        if (strparam== "5") {
+            $(".orders-title li:eq(1)").addClass("activenum").siblings().removeClass("activenum");
+        }
+
+        $(function () {
+            if (!$.trim($('#products').html())) {
+                $('#empty').css('display', '');
+            }
+            else {
+                $('#empty').css('display', 'none');
+            }
+        });
+
+    </script>
+<Hi:Common_Footer runat="server" />

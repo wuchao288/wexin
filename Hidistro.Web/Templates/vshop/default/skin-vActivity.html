@@ -1,0 +1,56 @@
+﻿<hi:common_header runat="server" />
+<link href="/style/guajiang/css/big_wheel.css" rel="stylesheet" />
+<link href="/style/guajiang/css/activity.css" rel="stylesheet" />
+
+<script type="text/javascript">
+    function Submit() {
+        var data = {};
+        data.id = $("#id").val();
+        data.item1 = $("#item1").val();
+        data.item2 = $("#item2").val();
+        data.item3 = $("#item3").val();
+        data.item4 = $("#item4").val();
+        data.item5 = $("#item5").val();
+
+        var len = $("#item1,#item2,#item3,#item4,#item5").length;
+
+        if (!data.item1) {
+            alert_h("请填写完整信息");
+            return;
+        }
+
+        $.post("/api/VshopProcess.ashx?action=SubmitActivity", data, function (json) {
+            if (json.success === true) {
+                alert_h("报名成功");
+                //location.reload();
+            }
+            else {
+                alert_h(json.msg);
+            }
+        });
+    }
+</script>
+<section id="content">
+    <div class="act_con">
+        <span>
+            <hi:hiimage runat="server" id="img" />
+        </span>
+        <div style="margin:10px;">
+            <asp:literal runat="server" id="litDescription" />
+        </div>
+    </div>
+
+    <div class="w_info">
+
+        <div class="act_info">
+            <h2 >报名信息登记：</h2>
+            <hi:common_activitycondition runat="server" />
+        </div>
+
+        <div id="divVoteOk" runat="server">
+            <a href="javascript:void(0)" onclick="Submit()" class="btn btn-danger">确认领奖人信息</a>
+        </div>
+    </div>
+</section>
+
+<hi:common_footer runat="server" />

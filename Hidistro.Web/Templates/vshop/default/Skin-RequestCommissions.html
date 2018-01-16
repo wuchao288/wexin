@@ -1,0 +1,19 @@
+﻿<hi:common_header runat="server" />
+<form>
+<div class="pbox">
+    <div class="form-group">
+        <label for="phone">
+            支付宝账号</label>
+        <input type="text" class="form-control" name="txtaccount" runat="server" id="txtaccount" placeholder="请输入您的支付宝账号信息" />
+    </div>
+    <div class="form-group">
+        <label for="phone">
+            提现金额</label>
+        <input type="text" class="form-control" name="txtmoney" runat="server" id="txtmoney" placeholder="" />
+    </div>
+    <p class="text-danger">
+        <i>*</i>您此次可提现的最大金额为<asp:Literal ID="litMaxMoney" runat="server"></asp:Literal>元,且提现最小金额为100元。</p>
+    <a type="button" href="#" onclick="return RequestCommissions()" class="btn btn-danger btn-block">确认申请</a>
+</div>
+</form>
+<hi:common_footer runat="server" />

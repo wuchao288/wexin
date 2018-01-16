@@ -1,0 +1,100 @@
+﻿<hi:common_header runat="server" />
+
+<link href="/style/other/ProductList.css" rel="stylesheet" />
+<link href="/style/other/category.css" rel="stylesheet" />
+
+<script>
+    var sort_filed = "<asp:literal id="lblSortFiled" runat="server"></asp:literal>";
+    var sort_direction = "<asp:literal id="lblSortDirection" runat="server"></asp:literal>";
+    var keyWord = "<asp:literal id="lblKeyWord" runat="server"></asp:literal>";
+    var category_id = "";
+    var list ='<asp:literal id="hdProductList" runat="server"></asp:literal>';
+</script>
+
+<script src="/script/other/product_list.js"></script>
+
+<div class="backtop" id="backtop">
+    <a href="javascript:void(0);"></a>
+</div>
+
+<div class="header">
+    <div style="width: 50px;" class="col1">
+        <a href="javascript:void(0);" onclick="history.back()" style="display: block; height: 50px;"></a>
+    </div>
+    <div style="-webkit-box-flex: 1;" class="col2">
+        <input type="search" id="txtKeywords" placeholder="请输入关键字">
+    </div>
+    <div style="width: 60px;" class="col3">
+        <a href="javascript:void(0);" style="display: block; height: 50px;" id="btnCategory"></a>
+    </div>
+</div>
+
+<div class="category" id="category">
+    <div class="title">
+        选择分类
+        <a>取消</a>
+    </div>
+    <ul>
+        <hi:vshoptemplatedrepeater id="rptCategories" templatefile="/Tags/skin-Common_ProducCategory.ascx"
+            runat="server" />
+    </ul>
+</div>
+
+<div style="background-color: white; padding: 10px;">
+    <div class="rank-list">
+        <div class="li-item" style="-webkit-box-flex: 1;">
+            <a href="javascript:void(0);" id="AddedDate" class="rank-item" sort="desc">新品
+            </a>
+        </div>
+        <div class="li-item" style="-webkit-box-flex: 1;">
+            <a href="javascript:void(0);" id="ShowSaleCounts" class="rank-item" sort="desc">销量
+            </a>
+        </div>
+        <div class="li-item" style="-webkit-box-flex: 1;">
+            <a href="javascript:void(0);" id="SalePrice" class="rank-item" sort="asc">价格
+            </a>
+        </div>
+        <div class="li-item li3" id="show_type">
+        </div>
+    </div>
+</div>
+
+<!--<div class="list-rank clearfix sort" style="margin-top: 10px;">
+    <a name="default" href="#" style="display: none">
+        <div>
+            默认<span class="glyphicon glyphicon-arrow-up"></span><span class="glyphicon glyphicon-arrow-down"></span>
+        </div>
+    </a><a name="saleprice" href="#">
+        <div>
+            价格<span class="glyphicon glyphicon-arrow-up"></span><span class="glyphicon glyphicon-arrow-down"></span>
+        </div>
+    </a><a name="addedDate" href="#">
+        <div>
+            上架<span class="glyphicon glyphicon-arrow-up"></span><span class="glyphicon glyphicon-arrow-down"></span>
+        </div>
+    </a><a name="VistiCounts" href="#">
+        <div>
+            浏览量<span class="glyphicon glyphicon-arrow-up"></span><span class="glyphicon glyphicon-arrow-down"></span>
+        </div>
+    </a><a name="showsaleCounts" href="#">
+        <div>
+            销量<span class="glyphicon glyphicon-arrow-up"></span><span class="glyphicon glyphicon-arrow-down"></span>
+        </div>
+    </a>
+</div>-->
+
+<p class="text-center list-empty hide" id="empty">
+    没有找到相关商品
+</p>
+
+
+
+<div class="pbox" id="productListContainer">
+
+    <div id="pager">
+    </div>
+</div>
+<input type="hidden" value="" runat="server" clientidmode="static" id="txtTotal" />
+<hi:common_footer runat="server" />
+<script src="/Utility/common.js" type="text/javascript"></script>
+<script src="/Utility/pager.js" type="text/javascript"></script>
